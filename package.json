@@ -1,0 +1,35 @@
+{
+  "name": "automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "open": "cypress open",
+    "test": "./node_modules/.bin/cypress run",
+    "specificHeadedTest": "npm run test -- --headed --spec 'cypress/integration/examples/Test01.js'",
+    "specificHeadedFolder": "npm run test -- --headed --spec './cypress/integration/examples/*.js'",
+    "headedTest": "npm run test -- --headed",
+    "chromeHeadedTest": "npm run test -- --headed --browser chrome",
+    "chromeHeadlessTest": "npm run test -- --browser chrome",
+    "recordDashboardTest": "npm run test -- --record --key da4e34cb-c26c-49d0-8d7a-8173338aed5d --reporter mochawesome"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
+  "author": "agha",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^8.7.0",
+    "cypress-cucumber-preprocessor": "^4.3.0",
+    "cypress-iframe": "^1.0.1",
+    "mocha": "^9.1.3",
+    "mochawesome": "^7.0.1",
+    "multiple-cucumber-html-reporter": "^1.18.0"
+  }
+}
