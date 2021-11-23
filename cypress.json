@@ -9,6 +9,6 @@
   "projectId": "ze1yde",
   "retries":{
     "runMode":1
-  },
-   "testFiles": "**/*.feature"
+  }
+  
 }
