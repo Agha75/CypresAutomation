@@ -66,5 +66,3 @@ And("Validate the forms behaviour", function () {
 Then("Select the shop page", () => {
   homePage.getShopLink().click();
 });
-
-
